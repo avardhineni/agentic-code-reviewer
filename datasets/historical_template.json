@@ -1,0 +1,17 @@
+{
+  "dataset_name": "my-verified-historical-bugs",
+  "cases": [
+    {
+      "id": "my-historical-bug-001",
+      "source": "historical",
+      "repository": "OWNER/REPO",
+      "introducing_commit": "EXACT_SHA_WHICH_INTRODUCED_BUG",
+      "fix_commit": "EXACT_SHA_WHICH_FIXED_BUG",
+      "fix_url": "https://github.com/OWNER/REPO/commit/FIX_SHA",
+      "diff_file": "samples/replace-with-introducing-change.patch",
+      "bugs": [
+        {"path": "relative/file.py", "line": 42, "category": "error_handling", "description": "Expected defect with evidence from fix"}
+      ]
+    }
+  ]
+}

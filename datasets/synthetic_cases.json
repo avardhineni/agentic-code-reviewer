@@ -1,0 +1,20 @@
+{
+  "dataset_name": "synthetic-demo-v1 (NOT a historical bug benchmark)",
+  "label_policy": "Labels are assumed complete for these tiny controlled diffs; review manually.",
+  "cases": [
+    {
+      "id": "sql-injection-demo",
+      "source": "synthetic",
+      "diff_file": "samples/vulnerable.patch",
+      "bugs": [
+        {"path": "app/auth.py", "line": 54, "category": "security", "description": "User-controlled email interpolated into SQL"}
+      ]
+    },
+    {
+      "id": "safe-query-demo",
+      "source": "synthetic",
+      "diff_file": "samples/safe.patch",
+      "bugs": []
+    }
+  ]
+}

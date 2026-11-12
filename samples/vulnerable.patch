@@ -1,0 +1,13 @@
+diff --git a/app/auth.py b/app/auth.py
+index 0000001..0000002 100644
+--- a/app/auth.py
++++ b/app/auth.py
+@@ -52,5 +52,6 @@ def lookup_user(cursor, email):
+     # Existing code checks that email is a string.
+     email = str(email)
+-    query = "SELECT * FROM users WHERE email = ?"
+-    cursor.execute(query, (email,))
++    query = f"SELECT * FROM users WHERE email = '{email}'"
++    cursor.execute(query)
++    # Added logging of the matched account.
+     return cursor.fetchone()

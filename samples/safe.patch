@@ -1,0 +1,10 @@
+diff --git a/app/profile.py b/app/profile.py
+index 0000001..0000002 100644
+--- a/app/profile.py
++++ b/app/profile.py
+@@ -8,3 +8,4 @@ def get_user(cursor, user_id):
+     # Do not embed user_id in SQL.
+     cursor.execute("SELECT name FROM users WHERE id = ?", (user_id,))
+-    return cursor.fetchone()
++    row = cursor.fetchone()
++    return row
